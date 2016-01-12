@@ -9,11 +9,11 @@ Github Instructions
 - [Submission](#submission)
 
 ##Setup
-1. Make sure you are using Eclipse Luna and that it is configured to use Java 8.
+1. Make sure you are using Eclipse Mars and that it is configured to use Java 8.
   1. Download [Eclipse here](https://eclipse.org/)
   2. Download [Java 8 here](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
   3. Make sure that Eclipse is configured correctly. `Eclipse->Preferences->Java->Compiler` should show a "Compiler compliance level" of 1.8 and `Installed JREs` should show Java SE 8. See the professor TA if you need help with this.
-2. Install either [Github for Mac](https://mac.github.com/) or [Github for Windows](https://windows.github.com/). If you are a Linux user, feel free to use the command line. There are lots of other equivalent tools, but we'll help you out with these. Eclipse also has some integrated support, but you will need to do a few things that aren't easy to do with Eclipse directly. Get used to the command line or a separate tool.
+2. Install the [Github Desktop](https://desktop.github.com/) for your platform. If you are a Linux user, feel free to use the command line. There are lots of other equivalent tools, but we'll help you out with these. Eclipse also has some integrated support, but you will need to do a few things that aren't easy to do with Eclipse directly. Get used to the command line or a separate tool.
 
 ##Initial Clone
 The instructor will create for you private repositories for all fo the work you will submit in this class. You should *always* first `clone` or `pull` (that is `update` in SVN terms) the appropriate repository before beginning work. In addition, if the instructor has reviewed your code you must make sure to `pull` any comments or changes *before you make changes*. If you do not, this will lead to unending headache (trust me on this one!).
@@ -23,7 +23,7 @@ Your repository names will use the following naming convention: `<github_usernam
 ###Using the Github Tool
 1. Make sure you have signed in to your github account.
 2. Choose `File->Clone Repository`. This will show you a list of all repositories you have available.
-3. Choose the appropriate repository, for example `CS212-S15/srollins-homework`, and then select the local directory where you'd like to save the data, for example `/Users/srollins/cs212`.
+3. Choose the appropriate repository, for example `CS212-S16/srollins-homework`, and then select the local directory where you'd like to save the data, for example `/Users/srollins/cs212`.
 4. Once you click `Clone` the data will be downloaded and you should be able to use `Finder` or `Explorer` to see it. The Github tool will show you *only* the files that have been changed locally and not pushed to Github. It will not list all files.
 
 ##Loading Projects into Eclipse
@@ -42,8 +42,8 @@ Commit your changes to Github *early and often*. You should *not* use Github as 
 ###Using the Github Tool
 1. On the `Changes` screen, select all of the files you wish to commit. This should *not* include classfiles or metadata, but should include any new Java files you have implemented, and any Java or other files you have changed. 
 2. In the `Summary` enter a short, meaningful description of the change. Do *not* enter messages such as "commit 1", "commit 2". *DO* enter messages such as "Completed InvertedIndexBuilder parseFile". In the `Description` box provide a more detailed description of the change you have made in this version of the code. 
-3. Click `Commit`. 
-4. Click `Sync` at the top right corner.
+3. Click `Commit to master`. 
+4. Click `Sync` at the top right corner. :warning: don't forget this step!
 5. Congratulations! Your changes should be available on Github.
 
 ###Hints
