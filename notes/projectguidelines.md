@@ -1,6 +1,5 @@
 Project Guidelines
 ===================
-*under development*
 
 ##Getting Started
 Begin work on your projects by first cloning the Github project repository that the instructor has created for you. The name of the repository will be `<username>-project`, for example `srollins-project`. You must work from this starting point, and submit your code to the same repository. More detail is available here: [Github instructions](githubinstructions.md)
@@ -18,14 +17,13 @@ Create a new release of your project as described in the [instructions for using
 :warning:  Do not create a release until you are passing all tests and believe you are prepared for a code review. You may always seek early feedback on your code by visiting office hours.
 
 ##Testing
-You should perform your own testing while you develop the project. The code provided only tests your final result, and may not be suitable for testing your project during development. To see which test files are relevant for each project, look at the test suites provided in the `Project#Test.java` files. For example, the `Project1Test.java` file references 
-`ConfigurationTest`, `DocumentLocationMapTest`, `InvertedIndexTest`, `ProjectTest`, and `IndexTest`. You must pass all of the tests in those two files for project 1.
+You should perform your own testing while you develop the project. The code provided only tests your final result, and may not be suitable for testing your project during development. To see which test files are relevant for each project, look at the test suites provided in the `Project#Test.java` files. 
 
 ###Running JUnit Tests Locally
 If your Eclipse project is properly setup, you should be able to right-click the appropriate test file and select "Run As->JUnit Test" in the Package Explorer.
 
 ##Code Review
-Once you have verified your project is properly submitted and passing the necessary JUnit tests, you may sign up for code review. Each code review is 20 minutes, and will be held in the instructor's office.
+Once you have verified your project is properly submitted and passing the necessary JUnit tests, you may sign up for code review. Each code review is 15 minutes, and will be held in the instructor's office.
 
 #### Code Review Appointments ####
 
@@ -49,7 +47,7 @@ After the review, your project will be given a `PASS`, `WARN`, or `FAIL` status:
 
   **:persevere: Do not fret!** This is expected to happen at least once per project. If you can pass the first code review, then you may not be in the right class!
 
-:hourglass: Each code review is 20 minutes. If we do not have a chance to review your entire project within this time frame, it is likely you will need another code review. As such, make sure you address any easy fixes such as proper formatting and commenting **prior** to the code review to avoid wasting time.
+:hourglass: Each code review is 15 minutes. If we do not have a chance to review your entire project within this time frame, it is likely you will need another code review. As such, make sure you address any easy fixes such as proper formatting and commenting **prior** to the code review to avoid wasting time.
 
 :warning: Remember to [pull any changes](https://help.github.com/articles/fetching-a-remote#pull) made during code review to your local repository! Otherwise, you will end up with [merge conflicts](https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line) that may be difficult to resolve.
 
@@ -66,3 +64,4 @@ Everyone is expected to resubmit each project 1 to 3 times after their first cod
 4. Sign up for another code review appointment using the process outlined above.
 
 :memo: For the most part, project resubmissions will not negatively impact your project grade. However, if you ignore an open issue or sign up for code review before you are passing the necessary tests, your final project score will be docked 5 points for each offense.
+
