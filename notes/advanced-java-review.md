@@ -1,7 +1,7 @@
 Java Programming Basics
 =======================
 
-##Types
+## Types
 
 List all primitive types in Java.
 
