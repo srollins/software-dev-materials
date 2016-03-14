@@ -233,3 +233,19 @@ http://mc01.cs.usfca.edu:8080/search
 
 The Web is not the Internet. The [Internet](https://en.wikipedia.org/wiki/Internet) is a *network of networks* that connect billions of computing devices.
 
+Networked communication over the Internet utilizes a *layered protocol stack*.
+Each layer has well-defined responsibilities and relies upon the other layers to do their jobs. 
+
+End hosts, like clients and servers, have five layers of functionality. Between two hosts are a series of other network components, including *routers* and *switches*. Those components do not have all five layers of functionality.
+
+From https://en.wikipedia.org/wiki/Internet_protocol_suite:
+
+![layers](https://upload.wikimedia.org/wikipedia/commons/c/c4/IP_stack_connections.svg)
+
+The five layers of the Internet protocol stack are defined as follows:
+
+- **Application**: The application layer is where end-user software resides. This could be any number of applications, for example a web server, a mail server, a web browser, or a P2P client. The HTTP protocol is commonly used at the application layer. Other protocols used at the application layer include the Simple Mail Transfer Protocol (SMTP), File Transfer Protocol (FTP), and the Domain Name System (DNS).
+- **Transport**: The transport layer supports host-to-host communication. The Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) are most commonly used. TCP is a reliable protocol and supports reliable data transmission, congestion control, and flow control. UDP is connectionless and unreliable. It may be used for applications such as voice over IP where it is better to ignore late-arriving packets rather than retransmit them.
+- **Network**: The network layer is responsible for routing and addressing in the Internet. The Internet Protocol (IP) is used for this purpose. Routers maintain tables of IP addresses and the best routes to use to reach those addresses. When a packet arrives on one router interface, it uses these tables to determine which outgoing interface to choose.
+- **Data Link/Media Access Control**: The link layer manages the connection between two networked devices. Depending on the media, it may be necessary to determine how multiple devices may share access to a single medium. Ethernet and Wireless Ethernet are examples of protocols used at this layer.
+- **Physical**: The physical layer determines how bits are exchanged.
