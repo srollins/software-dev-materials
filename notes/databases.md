@@ -8,7 +8,7 @@ Databases and SQL
 
 Basic idea: save data so that it can survive even if the machine or application reboots
 
-- YelpStore gone in case of power failure
+- MusicLibrary gone in case of power failure
 - Account information (usernames, passwords)? 
  
 Options:
@@ -60,10 +60,6 @@ For this course, we'll be using mySQL.
 mySQL runs on the host `sql.cs.usfca.edu`. 
 
 Your servlets (or any other Java program) will use Java Database Connectivity (JDBC) to connect to the database from your Java code.
-
-[Database assignments](https://github.com/CS601-F15/projects/blob/master/sqlassigns.md) lists the username and database you may use for your coursework.
-
-Your initial password is the same as your username, and you will use a database of the same name.
 
 ### Accessing your database via command line
 
@@ -183,7 +179,7 @@ DROP TABLE phone;
 
 JDBC allows you to connect to an SQL database from Java code.
 
-See the following example: [JDBC](https://github.com/CS601-F15/lectures/tree/master/code/JDBC)
+See the code examples in the lectures repository.
 
 ### Creating an ssh tunnel
 
