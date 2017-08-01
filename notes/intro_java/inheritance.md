@@ -1,7 +1,6 @@
 Inheritance
 ===========
 
-
 ## Interfaces
 
 ### Sorting Example

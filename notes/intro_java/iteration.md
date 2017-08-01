@@ -101,7 +101,7 @@ The `java.util.Scanner` class is an example of a class that implements the `Iter
 ```java
 java.util.Scanner s = new java.util.Scanner(new java.io.File("test.txt"));
 while(s.hasNext()) { 
- System.out.println(s.next());
+	System.out.println(s.next());
 }
 ```
 

@@ -28,7 +28,7 @@ else
 	make recursive call
 ```
 
-**The Recursive Case** - "For cases that are to be solved recursively, the recursive call must always be to a case that makes progress toward a base case." Consider what would happen if we called recursive factorial by passing in `n` instead of `n-1` on the last line of the method. Because we would not be making progress toward the base case the program would continue calling itself wiht the same input until we encountered a `StackOverflowException`. 
+**The Recursive Case** - "For cases that are to be solved recursively, the recursive call must always be to a case that makes progress toward a base case." Consider what would happen if we called recursive factorial by passing in `n` instead of `n-1` on the last line of the method. Because we would not be making progress toward the base case the program would continue calling itself with the same input until we encountered a `StackOverflowException`. 
 
 **Design Rule** - "Assume that all recursive calls work." This is probably the hardest rule to apply!
 

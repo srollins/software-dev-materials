@@ -8,7 +8,7 @@ To understand file input it is also important to understand how [exceptions](htt
 
 ## Search and Replace Example
 
-This document will discuss the following example that reads a text file and prints the text found replacing all instances of a *search* term with a *replace* term. The example with complete documentation may be found here: [SearchAndReplace.java](https://github.com/CS112-F16/code/blob/master/GeneralExamples/SearchAndReplace.java).
+This document will discuss the following example that reads a text file and prints the text found replacing all instances of a *search* term with a *replace* term. 
 
 ```java
 import java.io.File;

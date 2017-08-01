@@ -13,7 +13,7 @@ A single `=` represents assignment and is typically read as "gets the value of".
 
 Java also provides **increment** and **decrement** operators.  `++` indicates add 1 and `--` indicates subtract 1.  The operator may appear on the right or the left of a variable name.  On the left, we refer to pre-increment/decrement, and on the right we refer to post-increment/decrement.  A pre-increment will first increment the variable and then execute the rest of the statement and a post-increment will first execute the statement and then increment the variable.  An example follows:
 
-```
+```java
 x = 5;
 System.out.println(++x); //prints 6
 
@@ -32,7 +32,7 @@ You may also use `[operator]=`, for example `+=`, to indicate that you wish to o
 - `>=` - true if the left side is greater than or equal to the right side
 - `<=` - true if the left side is less than or equal to the right side
 
-```
+```java
 int a = 5;
 int b = 4;
 
@@ -56,7 +56,7 @@ System.out.println(a >= b); //true
 
 Given the following class `Name`:
 
-```
+```java
 public class Name {
 
     private String first;
@@ -88,7 +88,7 @@ public class Name {
 
 The following statements would give the output indicated:
 
-```
+```java
 Name n1 = new Name("Bob", "Smith");
 
 Name n2 = new Name("Sally", "Sue");

@@ -117,7 +117,7 @@ names[1] = new Name("Jane", "Wu");
 
 ### Inserting Elements into an Array
 
-Adding a new element at an arbitrary position in a array is more challening then adding to an `ArrayList`. If the element's value dictates that it should be inserted anywhere but in the rightmost position, the insert procedure must shift the the right all elements that come after the element to be inserted. The following example implements a procedure to insert an element at index 1 of an array containing `count` elements. 
+Adding a new element at an arbitrary position in a array is more challenging then adding to an `ArrayList`. If the element's value dictates that it should be inserted anywhere but in the rightmost position, the insert procedure must shift the the right all elements that come after the element to be inserted. The following example implements a procedure to insert an element at index 1 of an array containing `count` elements. 
 
 ```java
 //insert an item at position 1
