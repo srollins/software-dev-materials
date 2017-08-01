@@ -17,7 +17,7 @@ Introductory Java Materials
 
 - [Classes](intro_java/classes.md)
 - [Methods](intro_java/methods.md) 
-- [Composition](intro_java/intro_java/design.md)
+- [Composition](intro_java/design.md)
 
 ## Advanced OO Concepts
 
