@@ -15,7 +15,7 @@ Introductory Java Materials
 
 ## Program Design
 
-- [Classes](intro_java/clases.md)
+- [Classes](intro_java/classes.md)
 - [Methods](intro_java/methods.md) 
 - [Composition](intro_java/intro_java/design.md)
 
