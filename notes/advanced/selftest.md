@@ -1,7 +1,7 @@
-Java Programming Basics
-=======================
+Java Self Test
+==============
 
-##Types
+## Types
 
 List all primitive types in Java.
 
@@ -9,7 +9,7 @@ Is `String` a primitive type?
 
 Explain the difference between `String`, `StringBuffer`, and `StringBuilder`.
 
-##Exceptions
+## Exceptions
 
 Explain the difference between checked and unchecked exceptions.
 
@@ -17,12 +17,11 @@ Give an example of a checked exception.
 
 Give an example of an unchecked exception.
 
-##Other terminology
+## Other terminology
 
 Explain *overloading* and *overriding*.
 
-
-##Static
+## Static
 
 Which of the following two programs will result in an error? Why?
 
@@ -55,7 +54,7 @@ public class StaticTwo {
 }
 ```
 
-##Inheritance and Polymorphism
+## Inheritance and Polymorphism
 
 What is the difference between an abstract class and an interface?
 

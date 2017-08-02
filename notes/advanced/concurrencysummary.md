@@ -5,7 +5,7 @@ Concurrency
 
 **Threads** are the programming abstraction that allow programmers to implement concurrent software.
 
-Programmatically, there are two ways to use threads in a program. The option we have discussed is to provide a class that implements the `Runnable` interface and provides a `run` method. Multiple instances of the `Runnable` class may be provided to individual threads, or to a thread pool, and the `run` methods will execute concurrently.
+Programmatically, there are two ways to use threads in a program. One option is to provide a class that implements the `Runnable` interface and provides a `run` method. Multiple instances of the `Runnable` class may be provided to individual threads, or to a thread pool, and the `run` methods will execute concurrently.
 
 A thread scheduler determines which thread runs at any given time. The programmer may not make any assumptions about the order in which threads are scheduled. The statements inside the `run` method executed by a thread will interleave in unpredictable ways.
 

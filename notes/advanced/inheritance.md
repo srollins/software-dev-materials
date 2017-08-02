@@ -7,7 +7,7 @@ Interfaces, for example [Comparable](https://docs.oracle.com/javase/8/docs/api/j
 
 Consider a program to model a beverage vending machine. We might want to have a class that stores information about any beverage that could be dispensed by our machine, for example the size of the beverage. 
 
-We might also want to have a class to provide more specific information about each individual type of beverage. Coffee, for example, may have a property to indicate whether it is decaffinated. Water may have a property to indicate whether it is sparkling or still.
+We might also want to have a class to provide more specific information about each individual type of beverage. Coffee, for example, may have a property to indicate whether it is decaffeinated. Water may have a property to indicate whether it is sparkling or still.
 
 Inheritance enables the programmer to take advantage of the hierarchical relationships inherent in software design. The programmer can define a **base** class (aka **superclass** or **parent** class) that defines some generic behavior. Unlike an interface, the base class can actually provide method implementations. **Derived** classes (aka **subclasses** or **child** classes) extend the base class; they inherit all of the functionality in the base class and may optionally define additional functionality specific to the child class. We say that a derived class has an "is-a" relationship with the base class.
 

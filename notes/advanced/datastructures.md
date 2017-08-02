@@ -3,7 +3,7 @@ Data Structures
 
 Understanding data structures and when and how to use them efficiently is extremely important.
 
-In Data Structures and Algorithms you will learn more about implementation strategies. In software development we focus more on choosing the right data structure to solve a particular problem.
+In Data Structures and Algorithms courses you learn more about implementation strategies. In software development we focus more on choosing the right data structure to solve a particular problem.
 
 The [Java Collections Framework](https://docs.oracle.com/javase/tutorial/collections/index.html) provides implementations of sets, lists, maps, and several other common data structures.
 

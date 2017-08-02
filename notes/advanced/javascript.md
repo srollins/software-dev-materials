@@ -10,5 +10,5 @@ The book [Engineering Software as a Service](http://www.amazon.com/Engineering-S
 
 [JQuery](https://jquery.com/) is a commonly-used javascript library that makes it easier for the js programmer to perform common tasks. 
 
-See the [Javascript](https://github.com/CS601-F15/lectures/tree/master/code/Javascript) project for examples of #1 and #2 above.
-
+<!--See the [Javascript](https://github.com/CS601-F15/lectures/tree/master/code/Javascript) project for examples of #1 and #2 above.
+-->

@@ -1,12 +1,12 @@
 Software Development Methodologies and Testing
 ================
 
-#Roles in Software#
+# Roles in Software #
 
 First, a few words about jobs in the software industry and where the responsibility for testing lies.
 
 ### Developer/Software Development Engineer (SDE)
-This is the role many of you will desire when you complete your degree. In the beginning, you'll probably spend much of your time writing (and testing!) code. Software developers, however, spend much of their time discussing requirements with others in their organizations, communicating progress and problems, and performing other responsibilities such as interviewing possible new team mates. In most cases, in a short amount of time you'll go from mostly programming to more meetings and other interactions where you will be expected to define system architecture, identify new features, and so on. 
+This is the role many CS undergrads desire when they complete a CS degree. In the beginning, you'll probably spend much of your time writing (and testing!) code. Software developers, however, spend much of their time discussing requirements with others in their organizations, communicating progress and problems, and performing other responsibilities such as interviewing possible new team mates. In most cases, in a short amount of time you'll go from mostly programming to more meetings and other interactions where you will be expected to define system architecture, identify new features, and so on. 
 
 These links provide an interesting perspective:
 
@@ -23,16 +23,17 @@ A more traditional "test" job is QA engineer. The QA engineer may or may not wri
 
 Many larger companies also have SDETs. The goal of this role is to write the code to test the product. SDETs do write code, however their goal is to automate the process of identifying bugs.
 
-#Software Engineering Overview#
-###Failed Software Projects
+# Software Engineering Overview 
+
+### Failed Software Projects
 - [Affordable care act website](http://www.cnn.com/2013/10/22/politics/obamacare-website-problems/)
 - [Therac-25 radiation therapy machine](https://en.wikipedia.org/wiki/Therac-25) killed patients because of a software bug
 
-###Software Engineering
+### Software Engineering
 The term was coined in 1969 and the goal was to discover more structure methods for building sofware.
 
 
-#Software Development Methodologies#
+# Software Development Methodologies
 
 ### Waterfall - 1970s
 This is the traditional method for software development that defines a lengthy and sequential design process. All of the requirements are defined up front and each stage of the process is completed before moving on to the next. If requirements change the process essentially needs to be restarted from the beginning. There is no flexibility. (see [Waterfall versus agile](https://www.atlassian.com/agile/program))
@@ -97,11 +98,11 @@ Not to be confused with agile, TDD in its purest form proposes that tests be wri
 
 [System testing](http://en.wikipedia.org/wiki/System_testing) tests the entire, end-to-end system. System testing falls under the category of [black-box testing](http://en.wikipedia.org/wiki/Black-box_testing). Black-box testing advocates testing of the system without accessing the internal compoents. In other words, the system is treated like a black box and the tests explore whether the correct outputs are produced given appropriate inputs. No knowledge of the code or logic is exploited.
 
-#Implementing Software Tests#
+# Implementing Software Tests
 
-[JUnit](http://junit.org/) is the framework we have used for automated unit and integration testing this semester, but it is certainly not the only testing framework. There is a lot of good information available on the [JUnit FAQ](https://github.com/junit-team/junit/wiki/FAQ).
+[JUnit](http://junit.org/) is a common framework used for automated unit and integration testing, but it is certainly not the only testing framework. There is a lot of good information available on the [JUnit FAQ](https://github.com/junit-team/junit/wiki/FAQ).
 
-### JUnit Mechanics
+### JUnit Mechanics (with Eclipse)
 
 JUnit is integrated into Eclipse, however to use JUnit outside of Eclipse you can download [from here](http://junit.org/).
 
