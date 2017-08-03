@@ -7,12 +7,12 @@ SVN Guide
 
 1. Install SVN. You will find many distributions here: [Apache SVN Binary Packages](https://subversion.apache.org/packages.html). If you are using a Mac you may install [homebrew](http://brew.sh/) and then install SVN using `brew install svn` as described [here on stackoverflow](http://stackoverflow.com/questions/19921714/command-line-svn-client-for-mac). On Windows, [Tortoise SVN](https://sourceforge.net/projects/tortoisesvn/) is recommended. :warning: Make sure to get an early start so that you may seek help from the instructor, TAs, or tutoring center *before* the assignment deadline.
 
-2. Create a class directory in your SVN repository using the following command in a terminal window: `svn mkdir https://www.cs.usfca.edu/svn/<username>/<course> -m "create cs 112 repo"`
-Make sure to replace `<username>` with your username and `<course>` with your class. The string in quotation marks is a message that you will modify as well.
+2. Create a class directory in your SVN repository using the following command in a terminal window: `svn mkdir https://www.cs.usfca.edu/svn/<username>/<course> -m "create cs <course> repo"`
+Make sure to replace `<username>` with your username and `<course>` with your class. The string in quotation marks is a message that indicates what you are doing with this particular SVN command.
 
 3. At this point, you have only created directories on the server. No new directories will have been created on your computer. You can verify that the directory was created correctly by visiting `https://www.cs.usfca.edu/svn/<username>`. You will be prompted for your Computer Science (not main USF!) login credentials. Once you provide them you will see a list of all repositories, which should include the new directory.
 
-4. Use the `co` command to check out the repository on your local computer. Use the terminal to navigate to the directory where you want to store the cs112 directory that will contain all of your work for the semester, for example something like `/Users/srollins/classwork`. Use the command `svn co https://www.cs.usfca.edu/svn/<username>/<course>`. You should see something like the following: `Checked out revision 1.`. If you now type `ls` to list all files in the directory, you should see that the `co` command create a new directory `<course>`.
+4. Use the `co` command to check out the repository on your local computer. Use the terminal to navigate to the directory where you want to store the <course> directory that will contain all of your work for the semester, for example something like `/Users/srollins/classwork`. Use the command `svn co https://www.cs.usfca.edu/svn/<username>/<course>`. You should see something like the following: `Checked out revision 1.`. If you now type `ls` to list all files in the directory, you should see that the `co` command create a new directory `<course>`.
 
 ## Assignments
 
@@ -33,12 +33,17 @@ For each assignment you will create a subdirectory in your `<course>` directory.
 
 5. **Commit your changes:** Once all files have been added you will *commit* your changes. This is the step that actually saves your files to the server. The command looks as follows: `svn commit -m "adding working Hello.java"`. Inside of the quotation marks, include a message that describes the code changes you have made since the last commit. You will see a message as follows if your commit was successful:
 
-  `
+  ```
   Transmitting file data .
   Committed revision 362.
-  `
+  ```
 
 6. **Verify your submission:** Use a browser to view the code and *confirm* the most up-to-date version has been committed. The URL should look as follows: `https://www.cs.usfca.edu/svn/<username>/<course>/<assignment>/`.
 
 7. **Updating:** Anytime you modify or extend your code make sure to (1) **add** any  new files (step 4); (2) **commit** changes (step 5); and (3) **verify** your submission (step 6).
   
+### Video
+
+The following video walks you through the process described above.
+
+[![svn](https://i.ytimg.com/vi/6jP6k71qe0c/0.jpg)](https://www.youtube.com/watch?v=6jP6k71qe0c)
