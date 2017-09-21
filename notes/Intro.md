@@ -10,7 +10,8 @@ Introductory Java Materials
 - [Command Line I/O](intro_java/cmdio.md)
 - [Iteration](intro_java/iteration.md)
 - [Strings](intro_java/strings.md)
-- [File I/O](intro_java/fileinput.md)
+- [File Input](intro_java/fileinput.md)
+- [File Output](intro_java/fileoutput.md)
 
 
 ## Program Design
