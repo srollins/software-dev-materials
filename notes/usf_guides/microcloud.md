@@ -32,11 +32,9 @@ Here is an example of how I would use scp from the command line to copy `example
 
 `scp example.jar srollins@stargate.cs.usfca.edu:cs514/example.jar`
 
-## SSH to the microcloud and run the program
+# SSH to the microcloud and run the program
 
-Now that the JAR and input files are available from the microcloud node, you will need to SSH to your microcloud node.
-
-The microcloud nodes are behind the CS firewall. This means you need to first ssh to stargate, then ssh to your microcloud node from stargate.
+Now that the JAR and input files are available from the microcloud node, you will need to SSH to your microcloud node. The microcloud nodes are behind the CS firewall. 
 
 It is recommended that you watch the videos on SSH available on the CS support page: [Using SSH](http://www.cs.usfca.edu/support.html#login).
 
