@@ -2,7 +2,7 @@ Running Your Server on the Microcloud
 =====================================
 
 
-#Remote login
+# Remote login
 
 First, make sure you are comfortable with logging in to our CS systems using command line tools. 
 
@@ -12,7 +12,7 @@ First, make sure you are comfortable with logging in to our CS systems using com
 4. The microcloud nodes mount your `/home/username` CS directory.
 
 
-#Jaring your code
+# Jaring your code
 
 You will next need to get your executable code to your home directory. One approach is to use `git` to clone your repository to your CS home directory, then compile your code there. Another approach is to package your code into a jar file.
 
@@ -24,14 +24,14 @@ You may package your code from the command line. I will provide instructions for
 4. Under `Launch configuration:`, select the class containing the main method that will run your server.
 5. Select an appropriate `Export destination:` and click `Finish`.
 
-#Using scp
+# Using scp
 
 Transfer your files to your home directory. One approach is to use scp. See [transferring files] (http://tutoringcenter.cs.usfca.edu/resources/transferring-files.html) for more detail.
 
-Here is an example of how I would use scp from the command line to copy `example.jar` from my local system to my home directory and save it in a file named `example.jar` in a directory named `/cs601`:
+Here is an example of how I would use scp from the command line to copy `example.jar` from my local system to my home directory and save it in a file named `example.jar` in a directory named `/cs514`:
 
 `scp example.jar srollins@stargate.cs.usfca.edu:cs601/example.jar`
 
-#Running remotely
+# Running remotely
 
 Run your code using `java -jar <filename>`.
