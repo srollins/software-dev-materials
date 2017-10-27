@@ -30,7 +30,7 @@ Transfer your files to your home directory. One approach is to use scp. See [tra
 
 Here is an example of how I would use scp from the command line to copy `example.jar` from my local system to my home directory and save it in a file named `example.jar` in a directory named `/cs514`:
 
-`scp example.jar srollins@stargate.cs.usfca.edu:cs601/example.jar`
+`scp example.jar srollins@stargate.cs.usfca.edu:cs514/example.jar`
 
 # Running remotely
 
