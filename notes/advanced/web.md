@@ -131,7 +131,7 @@ The URL above has several parts:
 https://www.google.com/search?q=url+path&oq=url+path&aqs=chrome..69i57.3123j0j4&sourceid=chrome&es_sm=91&ie=UTF-8
 ```
 
-In this example, the protocol is `https`, the host is `www.google.com`, and the path is `/search`. Following the path are a set of **parameters**. These further identify the resource. The parameters begin with `&` and are a sequence of `key=value` pairs separated by `&`.
+In this example, the protocol is `https`, the host is `www.google.com`, and the path is `/search`. Following the path are a set of **parameters**. These further identify the resource. The parameters begin with `?` and are a sequence of `key=value` pairs separated by `&`.
 
 ### Loading a Web Page
 
