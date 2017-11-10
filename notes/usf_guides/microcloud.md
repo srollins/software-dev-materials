@@ -20,7 +20,7 @@ You may package your code from the command line. I will provide instructions for
 
 1. Right-click on the project and select `Export`.
 2. Choose `Java > Runnable JAR file` and select `Next`.
-3. Select `Package required libraries into generated JAR`.
+3. Select `Extract required libraries into generated JAR`.
 4. Under `Launch configuration:`, select the class containing the main method that will run your server.
 5. Select an appropriate `Export destination:` and click `Finish`.
 
