@@ -6,7 +6,7 @@ Running Your Server on the Microcloud
 
 First, make sure you are comfortable with logging in to our CS systems using command line tools. 
 
-1. The [tutoring center website] (http://tutoringcenter.cs.usfca.edu/resources/logging-in-remotely.html) has instructions for logging in remotely.
+1. The [tutoring center website](http://tutoringcenter.cs.usfca.edu/resources/logging-in-remotely.html) has instructions for logging in remotely.
 2. Once you log in to `stargate` you will be able to access any of the machines inside of the CS firewall.
 3. To log in to a microcloud node, simply ssh in the node, for example `ssh srollins@mc01.cs.usfca.edu`.
 4. The microcloud nodes mount your `/home/username` CS directory.
