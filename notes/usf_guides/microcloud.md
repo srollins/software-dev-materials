@@ -26,7 +26,7 @@ You may package your code from the command line. I will provide instructions for
 
 # Using scp
 
-Transfer your files to your home directory. One approach is to use scp. See [transferring files] (http://tutoringcenter.cs.usfca.edu/resources/transferring-files.html) for more detail.
+Transfer your files to your home directory. One approach is to use scp. See [transferring files](http://tutoringcenter.cs.usfca.edu/resources/transferring-files.html) for more detail.
 
 Here is an example of how I would use scp from the command line to copy `example.jar` from my local system to my home directory and save it in a file named `example.jar` in a directory named `/cs514`:
 
