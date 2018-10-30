@@ -14,14 +14,14 @@ Basic idea: save data so that it can survive even if the machine or application 
 Options:
 
 - Flat file - may be difficult to 
- - format
- - find information e.g., find all deposits greater than $100 in last 17 days 
- - perform concurrent writes/reads
- - not accessible across machines 
+  * format
+  * find information e.g., find all deposits greater than $100 in last 17 days 
+  * perform concurrent writes/reads
+  * not accessible across machines 
 
 - Cloud storage
- - physically distributed (multiple sites)
- - managed by a third-party, who you may not trust!
+  * physically distributed (multiple sites)
+  * managed by a third-party, who you may not trust!
 
 - Relational database
 
