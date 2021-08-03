@@ -3,7 +3,7 @@ Inheritance
 
 ## Overview ##
 
-Interfaces, for example [Comparable](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html) and [Comparator](https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html), enable software reuse by allowing the programmer to specify the behavior that will be supported by any class that implements the interface. This is useful if a set of classes will all support the same behavior in different ways. However, it is often the case that a set of classes support some of the same functionality, but also some different functionality. They exhibit a hierarchical relationship.
+Interfaces, for example [Comparable](https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Comparable.html) and [Comparator](https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Comparator.html), enable software reuse by allowing the programmer to specify the behavior that will be supported by any class that implements the interface. This is useful if a set of classes will all support the same behavior in different ways. However, it is often the case that a set of classes support some of the same functionality, but also some different functionality. They exhibit a hierarchical relationship.
 
 Consider a program to model a beverage vending machine. We might want to have a class that stores information about any beverage that could be dispensed by our machine, for example the size of the beverage. 
 
