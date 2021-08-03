@@ -3,9 +3,16 @@ Software Development in Java
 
 Java is an object-oriented programming language that is widely used, particularly for backend development as well as development of Android applications.
 
-Here are some interesting thoughts on [programming languages](https://www.sitepoint.com/whats-the-best-programming-language-to-learn-in-2017/).
+Here are a couple of articles that offer thoughts on learning various programming languages:
 
-If you are new to Java, make sure to bookmark [The Java Tutorials](https://docs.oracle.com/javase/tutorial/).
+- [The 7 Best Programming Languages To Learn in 2021](https://www.indeed.com/career-advice/career-development/best-programming-languages-to-learn)
+- [The 10 Most Popular Programming Languages to Learn in 2021](https://www.northeastern.edu/graduate/blog/most-popular-programming-languages/)
+
+If you are new to Java it is strongly recommended that you learn the basics through online tutorials or other resources. Here are a few resources:
+
+- [The Java Tutorials](https://docs.oracle.com/javase/tutorial/)
+- [Java "Back to Basics" Tutorial](https://www.baeldung.com/java-tutorial)
+- [Java Tutorial, W3 Schools](https://www.w3schools.com/java/)
 
 ## Code Quality
 
