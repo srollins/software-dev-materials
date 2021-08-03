@@ -48,7 +48,7 @@ Sets are useful if you want to guarantee there are no duplicates in your collect
 
 ## Running Time Comparison
 
-The [API Specification](http://docs.oracle.com/javase/8/docs/api/index.html?java/util/Collections.html) provides information about the running time of common operations as outlined below.
+The [API Specification](https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/package-summary.html#CollectionsFramework) provides information about the running time of common operations as outlined below.
 
 | Data Structure | Operation | Running Time | Notes |
 |:---|:---|:---|:---|
@@ -57,11 +57,9 @@ The [API Specification](http://docs.oracle.com/javase/8/docs/api/index.html?java
 | | all other operations (`contains`, `indexOf`) | O(n) | | 
 | LinkedList | | | Implemented as a doubly-linked list. | 
 | HashMap | `get`, `put` | O(1) | Initial capacity and load factor influence performance. | 
-|  | iteration | O(n) | | 
 | TreeMap | `get`, `put`, `remove`, `containsKey` | O(log(n)) | |
 | LinkedHashMap |`add`, `remove`, `contains` | O(1)| Elements are ordered by insertion order. |
 | HashSet | `add`, `remove`, `contains`, `size` | O(1) | Does not guarantee order of elements over time. |
-| | iteration | O(n) |
 | TreeSet | `add`, `remove`, `contains` | O(log(n))| Guarantees elements are sorted. |
 | LinkedHashSet | `add`, `remove`, `contains` | O(1)| Elements are ordered by insertion order. *Performance is likely to be just slightly below that of HashSet, due to the added expense of maintaining the linked list, with one exception: Iteration over a LinkedHashSet requires time proportional to the size of the set, regardless of its capacity. Iteration over a HashSet is likely to be more expensive, requiring time proportional to its capacity.* |
 
