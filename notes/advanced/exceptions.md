@@ -1,7 +1,7 @@
 Exceptions in Java
 ==================
 
-From the [Java Exceptions Tutorial](https://docs.oracle.com/javase/tutorial/essential/exceptions/definition.html):
+From the [Java Exceptions Tutorial](https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html ):
 
 > **Definition:** An exception is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions.
 
@@ -184,7 +184,8 @@ public class DuplicateItemException extends Exception {
 You may then implement code to `throw` an instance of the exception in appropriate cases.
 
 ```java
-public void addItem(String item) throws DuplicateItemException {	if(list.contains(item)) {
+public void addItem(String item) throws DuplicateItemException {	
+	if(list.contains(item)) {
 		throw new DuplicateItemException("Item " + item + " already in list.");
 	}
 	list.add(item);		
