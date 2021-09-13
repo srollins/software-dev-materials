@@ -37,9 +37,9 @@ When a message is sent, each layer will process the message, perhaps break it up
 
 # Application Layer
 
-The application developer writes code that executes at the application layer. A single host may run multiple applications and an application-layer protocol defines the communication between these processes communicating across the network. HTTP is one example of an application-layer protocol. SMTP and FTP are two other examples.
+The application developer writes code that executes at the application layer. A single host may run multiple applications, and an application-layer protocol defines the communication between these processes communicating across the network. HTTP is one example of an application-layer protocol. SMTP and FTP are two other examples.
 
-The application layer communicates with the transport layer via a socket. When the transport layer has a message to deliver to the application layer it determines which socket to use based on the port number specified in the message. When an application creates a socket it determines which transport layer protocol to use.
+The application layer communicates with the transport layer via a socket. When the transport layer has a message to deliver to the application layer it determines which socket to use based on the **port number** specified in the message. When an application creates a socket it determines which transport layer protocol to use.
 
 ## HTTP
 
@@ -47,7 +47,14 @@ The HyperText Transfer Protocol was originally used for communication between we
 
 Recall that for most web requests the client will request a web page, then request several additional resources that appear on the page, for example images. HTTP 1.0 required the client to open a new connection for every request. A big change in HTTP 1.1 was that it allowed persistent connections, so the same connection could be reused to make multiple requests. Because of the way that TCP operates, this can result in significant performance gains.
 
-HTTP/2 is the latest iteration of HTTP. As noted on [Akami's website](https://http2.akamai.com/), there are several differences that improve performance in the latest version.
+
+In the past few years, there have been significant changes to HTTP. As you can see from the following diagram from the [Akamai Developer Blog](https://developer.akamai.com/blog/2020/04/14/quick-introduction-http3), HTTP 1.1 was dominant for many years. Rollout of HTTP/2 starting in the mid-2010s, and HTTP/3 is currently gaining adoption.
+
+![https://developer.akamai.com/sites/default/files/inline-images/image1_18.png](https://developer.akamai.com/sites/default/files/inline-images/image1_18.png)
+> https://developer.akamai.com/sites/default/files/inline-images/image1_18.png
+
+
+HTTP/2 was designed to decrease latency and improve performance. As noted on [Akami's website](https://http2.akamai.com/), HTTP/2 offers the following:
 
 > Multiplexing and concurrency: Several requests can be sent in rapid succession on the same TCP connection, and responses can be received out of order - eliminating the need for multiple connections between the client and the server
 >
@@ -58,23 +65,24 @@ Header compression: HTTP header size is drastically reduced
 >
 Server push: The server can send resources the client has not yet requested
 
-## WebSockets
+HTTP/3 differs from HTTP/2 in that it does not use the Transport Control Protocol (TCP) as its transport layer. The following resources provide more detail about HTTP/3:
 
-The traditional client-server web model assumes that the client initiates the connection and the server is stateless. That isn't to say that the server doesn't keep state about clients that may be retrieved based upon a cookie or token, however there is no state associated with the specific request. This becomes a limiting factor in many applications, for example a home automation system.
-
-WebSockets are a new(ish) protocol that allow a client and server to maintain a persistent connection over a long period of time. The client uses HTTP to make the initial connection to the server, but specifies a header that indicates it would like to upgrade to websockets. If the server is able, it will then upgrade the socket and maintain a long-running TCP connection with the client. The benefit of this model is that the server may push content to the client, at the cost of maintaining state about all open connections on the server side.
+- [Akamai: HTTP/3 and QUIC: Past, Present, and Future](https://www.akamai.com/blog/performance/http3-and-quic-past-present-and-future)
+- [HTTP/3 Explained](https://http3-explained.haxx.se/)
+- [QUIC at Snapchat](https://eng.snap.com/quic-at-snap/)
+- [InfoQ: The Status of HTTP/3](https://www.infoq.com/news/2020/01/http-3-status/)
 
 # Transport Layer
 
-The transport layer maintains an end-to-end connection between two hosts. The two transport-layer protocols most used in the Internet are TCP and UDP. The Transmission Control Protocol is used for any application that requires reliability from the transport layer. The User Datagram Protocol is unreliable and provides little functionality over raw IP. It is used, however, for applications such as real-time streaming where resending old packets is not helpful for the application. It may also be used if the application developer wants to provide a custom reliability mechanism.
+The transport layer maintains an end-to-end connection between two hosts. The two transport-layer protocols most used in the Internet are TCP and UDP. The Transmission Control Protocol (TCP) was traditionally used for any application that requires reliability from the transport layer. The User Datagram Protocol (UDP) was traditionally used for applications that are unreliable. It provides little functionality over raw IP. It is used, however, for applications such as real-time streaming where resending old packets is not helpful for the application. It may also be used if the application developer wants to provide a custom reliability mechanism. HTTP/3 operates on top of UDP and uses a new protocol, QUIC, to provide TCP-like transport layer functionality in user space.
 
 ## TCP 
 
 TCP is a connection-oriented, reliable transport protocol. Among other things, TCP provides reliability, flow control, and congestion control.
 
-![http://tr1.cbsistatic.com/hub/i/2015/06/03/596ecee7-0987-11e5-940f-14feb5cc3d2a/r00220010702mul01_02.gif](http://tr1.cbsistatic.com/hub/i/2015/06/03/596ecee7-0987-11e5-940f-14feb5cc3d2a/r00220010702mul01_02.gif)
+<!--![http://tr1.cbsistatic.com/hub/i/2015/06/03/596ecee7-0987-11e5-940f-14feb5cc3d2a/r00220010702mul01_02.gif](http://tr1.cbsistatic.com/hub/i/2015/06/03/596ecee7-0987-11e5-940f-14feb5cc3d2a/r00220010702mul01_02.gif)
 > http://tr1.cbsistatic.com/hub/i/2015/06/03/596ecee7-0987-11e5-940f-14feb5cc3d2a/r00220010702mul01_02.gif
-
+-->
 <!--
 ![https://fthmb.tqn.com/O8I6Dt9t5xVrw3UOVnbBUPdKjGs=/768x0/filters:no_upscale()/about/tcp-header-56a1adc85f9b58b7d0c1a24f.png](https://fthmb.tqn.com/O8I6Dt9t5xVrw3UOVnbBUPdKjGs=/768x0/filters:no_upscale()/about/tcp-header-56a1adc85f9b58b7d0c1a24f.png) 
 > https://fthmb.tqn.com/O8I6Dt9t5xVrw3UOVnbBUPdKjGs=/768x0/filters:no_upscale()/about/tcp-header-56a1adc85f9b58b7d0c1a24f.png
@@ -107,31 +115,24 @@ A congestion event triggers an aggressive decrease in the congestion window (cwn
 
 When a TCP flow begins, it uses slow start to attempt to figure out the amount of available bandwidth quickly. It starts by sending only one segment and waiting for a reply. As long as a congestion event is not detected, the sender will exponentially increase the cwnd each RTT, until it reaches a threshold. In 2010, Google published [An Argument for Increasing TCP's Initial Congestion Window](https://research.google.com/pubs/pub36640.html) and it is pretty common to tune the initial congestion window to use larger values.
 
-#### BBR
 
-In December 2016, Google published an article on [BBR: Congestion-Based Congestion Control](http://queue.acm.org/detail.cfm?id=3022184). The fundamental idea is that loss is that in modern networks is not the best way to detect congestion. They argue that the optimal operating point is at the bandwidth delay product (BDP) line, and the sending rate may reach that point long before a loss occurs. 
+## QUIC
 
-![http://deliveryimages.acm.org/10.1145/3030000/3022184/vanjacobson1.png](http://deliveryimages.acm.org/10.1145/3030000/3022184/vanjacobson1.png)
-> http://deliveryimages.acm.org/10.1145/3030000/3022184/vanjacobson1.png
+[QUIC](https://www.chromium.org/quic) was original developed at Google as a user-space alternative to TCP that would improve web performance. It runs on top of UDP and implements many of the components of TCP, including congestion control and reliability, in user space. It also provides encryption at the application layer.
 
-They propose an algorithm that will  monitor both the RTT and the bottleneck bandwidth, and adapt sending rate to match the bottleneck bandwidth. The algorithm periodically probes to see if the bottleneck bandwidth has increased and, if so, the overall sending rate increases.
+![https://www.akamai.com/content/dam/site/en/images/blog/2021/http-3-and-quic-past-present-and-future1.jpg](https://www.akamai.com/content/dam/site/en/images/blog/2021/http-3-and-quic-past-present-and-future1.jpg)
+> https://www.akamai.com/content/dam/site/en/images/blog/2021/http-3-and-quic-past-present-and-future1.jpg
 
-![http://deliveryimages.acm.org/10.1145/3030000/3022184/vanjacobson2.png](http://deliveryimages.acm.org/10.1145/3030000/3022184/vanjacobson2.png)
-> http://deliveryimages.acm.org/10.1145/3030000/3022184/vanjacobson2.png
 
-![http://deliveryimages.acm.org/10.1145/3030000/3022184/vanjacobson3.png](http://deliveryimages.acm.org/10.1145/3030000/3022184/vanjacobson3.png)
-> http://deliveryimages.acm.org/10.1145/3030000/3022184/vanjacobson3.png
-
-The article reports that Google has implemented this algorithm in their WAN, and also in YouTube servers with significant performance gains.
 
 # Network Layer
 
 The network layer handles routing in the Internet. The Internet Protocol (IP) manages addressing and routing. 
 
-![http://tr1.cbsistatic.com/hub/i/2015/06/03/59843f0d-0987-11e5-940f-14feb5cc3d2a/r00220010702mul01_03.gif](http://tr1.cbsistatic.com/hub/i/2015/06/03/59843f0d-0987-11e5-940f-14feb5cc3d2a/r00220010702mul01_03.gif)
+<!--![http://tr1.cbsistatic.com/hub/i/2015/06/03/59843f0d-0987-11e5-940f-14feb5cc3d2a/r00220010702mul01_03.gif](http://tr1.cbsistatic.com/hub/i/2015/06/03/59843f0d-0987-11e5-940f-14feb5cc3d2a/r00220010702mul01_03.gif)
 > http://tr1.cbsistatic.com/hub/i/2015/06/03/59843f0d-0987-11e5-940f-14feb5cc3d2a/r00220010702mul01_03.gif
-
-A router has multiple interfaces and a routing algorithm is used to populate a forwarding table that specifies how to move packets from incoming to outgoing interfaces. When a packet destined for a particular address arrives on one interface, the router consults the forwarding table to determine the appropriate outgoing interface for the packet. Organizations are typically assigned blocks of IP address with the same prefix, so the routing table aggregates multiple addresses into one entry.
+-->
+A router has multiple interfaces, and a routing algorithm is used to populate a forwarding table that specifies how to move packets from incoming to outgoing interfaces. When a packet destined for a particular address arrives on one interface, the router consults the forwarding table to determine the appropriate outgoing interface for the packet. Organizations are typically assigned blocks of IP address with the same prefix, so the routing table aggregates multiple addresses into one entry.
 
 ![http://www.cisco.com/c/dam/en/us/td/i/000001-100000/60001-65000/62001-63000/62445.ps/_jcr_content/renditions/62445.jpg](http://www.cisco.com/c/dam/en/us/td/i/000001-100000/60001-65000/62001-63000/62445.ps/_jcr_content/renditions/62445.jpg)
 > http://www.cisco.com/c/dam/en/us/td/i/000001-100000/60001-65000/62001-63000/62445.ps/_jcr_content/renditions/62445.jpg
@@ -151,4 +152,29 @@ The link layer connects two adjacent hosts and the physical layer handles how bi
 Depending on the underlying technology, the link layer may implement several different functions including error detection and correction, flow control, reliability, or link access. The link layer may also be referred to as the MAC (medium access control) layer, and each *interface* on a host has a hardware or MAC address.
 
 Links may be point-to-point, or broadcast based. A broadcast medium, such as wireless ethernet, must implement a multiple access protocol that allows multiple hosts to share the medium. There are many styles of protocols that are implement in broadcast networks. In some cases, hosts may follow an explicit turn taking protocol. In some cases, hosts may send messages on the medium and, if a collision is detected, stop and wait for some time before trying to send again. 
+
+<!--## WebSockets
+
+The traditional client-server web model assumes that the client initiates the connection and the server is stateless. That isn't to say that the server doesn't keep state about clients that may be retrieved based upon a cookie or token, however there is no state associated with the specific request. This becomes a limiting factor in many applications, for example a home automation system.
+
+WebSockets are a new(ish) protocol that allow a client and server to maintain a persistent connection over a long period of time. The client uses HTTP to make the initial connection to the server, but specifies a header that indicates it would like to upgrade to websockets. If the server is able, it will then upgrade the socket and maintain a long-running TCP connection with the client. The benefit of this model is that the server may push content to the client, at the cost of maintaining state about all open connections on the server side.
+-->
+
+<!--#### BBR
+
+In December 2016, Google published an article on [BBR: Congestion-Based Congestion Control](http://queue.acm.org/detail.cfm?id=3022184). The fundamental idea is that loss is that in modern networks is not the best way to detect congestion. They argue that the optimal operating point is at the bandwidth delay product (BDP) line, and the sending rate may reach that point long before a loss occurs. 
+
+<!--![http://deliveryimages.acm.org/10.1145/3030000/3022184/vanjacobson1.png](http://deliveryimages.acm.org/10.1145/3030000/3022184/vanjacobson1.png)
+> http://deliveryimages.acm.org/10.1145/3030000/3022184/vanjacobson1.png
+-->
+<!--They propose an algorithm that will  monitor both the RTT and the bottleneck bandwidth, and adapt sending rate to match the bottleneck bandwidth. The algorithm periodically probes to see if the bottleneck bandwidth has increased and, if so, the overall sending rate increases.
+-->
+<!--![http://deliveryimages.acm.org/10.1145/3030000/3022184/vanjacobson2.png](http://deliveryimages.acm.org/10.1145/3030000/3022184/vanjacobson2.png)
+> http://deliveryimages.acm.org/10.1145/3030000/3022184/vanjacobson2.png
+-->
+<!--![http://deliveryimages.acm.org/10.1145/3030000/3022184/vanjacobson3.png](http://deliveryimages.acm.org/10.1145/3030000/3022184/vanjacobson3.png)
+> http://deliveryimages.acm.org/10.1145/3030000/3022184/vanjacobson3.png
+-->
+<!--The article reports that Google has implemented this algorithm in their WAN, and also in YouTube servers with significant performance gains.-->
+
 
