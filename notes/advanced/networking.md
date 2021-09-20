@@ -120,8 +120,8 @@ When a TCP flow begins, it uses slow start to attempt to figure out the amount o
 
 [QUIC](https://www.chromium.org/quic) was original developed at Google as a user-space alternative to TCP that would improve web performance. It runs on top of UDP and implements many of the components of TCP, including congestion control and reliability, in user space. It also provides encryption at the application layer.
 
-![https://www.akamai.com/content/dam/site/en/images/blog/2021/http-3-and-quic-past-present-and-future1.jpg](https://www.akamai.com/content/dam/site/en/images/blog/2021/http-3-and-quic-past-present-and-future1.jpg)
-> https://www.akamai.com/content/dam/site/en/images/blog/2021/http-3-and-quic-past-present-and-future1.jpg
+![https://www.f5.com/content/dam/f5-com/page-assets-en/home-en/company/blog/2021/feb22-quic-layers.png](https://www.f5.com/content/dam/f5-com/page-assets-en/home-en/company/blog/2021/feb22-quic-layers.png)
+> https://www.f5.com/content/dam/f5-com/page-assets-en/home-en/company/blog/2021/feb22-quic-layers.png
 
 
 
