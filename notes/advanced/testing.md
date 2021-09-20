@@ -31,7 +31,7 @@ Many larger companies also have SDETs. The goal of this role is to write the cod
 
 ### Integration Testing
 
-[Integration testing](http://en.wikipedia.org/wiki/Integration_testing) also falls under the category of white-box testing. Integration tests examines how modules integrate with each other. An integration test may test parameter passing between modules, or consider a specific workflow through the application. 
+[Integration testing](http://en.wikipedia.org/wiki/Integration_testing) (also see [Fowler's thoughts on integration tests](https://martinfowler.com/bliki/IntegrationTest.html)) also falls under the category of white-box testing. Integration tests examines how modules integrate with each other. An integration test may test parameter passing between modules, or consider a specific workflow through the application. 
 
 ### System Testing
 
@@ -82,13 +82,25 @@ Of course, arguably the most challenging element of testing is writing good test
 
 ### Other Notes
 
+There are several [naming conventions](https://dzone.com/articles/7-popular-unit-test-naming) that are commonly used.
+
 Often, the number of lines of test code will exceed the number of lines of code being tested. In some cases, you may see 5x more test code than non-test code. 
 
 Writing tests helps to enforce better design. If you have a hard time writing good test cases, you may want to rethink your original code.
 
 ### Exercises
 
-1. **A URL consists of the following parts:**
+1. **Describe 3 unit tests for the following method:**
+
+	```
+	/**
+	 * isSorted takes as input an array of int and returns true if the list is
+	 * sorted and false otherwise.
+	 */
+	public boolean isSorted(int[] list);
+	``` 
+
+2. **A URL consists of the following parts:**
 
     ```
 	    [protocol]://[domain]/[path]&[queryString]
@@ -115,7 +127,7 @@ Writing tests helps to enforce better design. If you have a hard time writing go
 
     `testGetProtocol` - construct a URL with the String "http://www.google.com". `assertTrue` - `getProtocol` returns `http`.
 
-2. **Describe one integration test for Project 1.**
-3. **Describe one integration test for Project 2.**
-4. **Describe one system test for Project 1 that you do not complete during interactive grading.**
-5. **Describe one system test for Project 2.**
+3. **Describe one integration test for Project 1.**
+4. **Describe one integration test for Project 2.**
+5. **Describe one system test for Project 1 that you do not complete during interactive grading.**
+6. **Describe one system test for Project 2.**
