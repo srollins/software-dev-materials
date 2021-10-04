@@ -8,21 +8,13 @@ First, make sure you are comfortable with logging in to our CS systems using com
 
 1. The [tutoring center website](http://tutoringcenter.cs.usfca.edu/resources/logging-in-remotely.html) has instructions for logging in remotely.
 2. Once you log in to `stargate` you will be able to access any of the machines inside of the CS firewall.
-3. To log in to a microcloud node, simply ssh in the node, for example `ssh srollins@mc01.cs.usfca.edu`.
+3. To log in to a microcloud node, simply ssh in the node, for example `ssh srollins@mcvm001.cs.usfca.edu`.
 4. The microcloud nodes mount your `/home/username` CS directory.
 
 
 # Jaring your code
 
 You will next need to get your executable code to your home directory. One approach is to use `git` to clone your repository to your CS home directory, then compile your code there. Another approach is to package your code into a jar file.
-
-You may package your code from the command line. I will provide instructions for packaging your code into an executable jar file through Eclipse.
-
-1. Right-click on the project and select `Export`.
-2. Choose `Java > Runnable JAR file` and select `Next`.
-3. Select `Extract required libraries into generated JAR`.
-4. Under `Launch configuration:`, select the class containing the main method that will run your server.
-5. Select an appropriate `Export destination:` and click `Finish`.
 
 # Using scp
 
@@ -36,28 +28,26 @@ Here is an example of how I would use scp from the command line to copy `example
 
 Now that the JAR and input files are available from the microcloud node, you will need to SSH to your microcloud node. The microcloud nodes are behind the CS firewall. 
 
-It is recommended that you watch the videos on SSH available on the CS support page: [Using SSH](http://www.cs.usfca.edu/support.html#login).
-
 In my case, I used the following two commands to log in to my assigned node - mc01:
 
 ```
 ssh srollins@stargate.cs.usfca.edu
-ssh mc01.cs.usfca.edu
+ssh mcvm001.cs.usfca.edu
 ```
 
 From any microcloud node, you will be able to access your home directory, so you can `cd` into the appropriate subdirectory, for example `cs514/SongFinder`.
 
-Once you are in the correct directory, use [nohup](https://en.wikipedia.org/wiki/Nohup) to execute your program. This will ensure that your program continues to run even if you log out of the microcloud node. The command I used to do this was as follows:
+Once you are in the correct directory, use [nohup](https://en.wikipedia.org/wiki/Nohup) to execute your program. This will ensure that your program continues to run even if you log out of the microcloud node. An example of how you might execute your program is as follows:
 
 ``` 
-nohup java -jar songfinder.jar &
+nohup java -cp project3.jar cs601.project3.chat.ChatServer &
 ```
 
 ### Exiting the program
 
 `nohup` allows your program to continue running even if you log out, and `&` says to run your program in the background. 
 
-Unfortunatelly, this makes it a bit difficult to exit your program. If you ran your program with the command `java -jar songfinder.jar` then you could easily use CTRL-C to exit the program. Not so with `nohup` and `&`.
+Unfortunatelly, this makes it a bit difficult to exit your program. If you ran your program with the command `java -cp project3.jar cs601.project3.chat.ChatServer` then you could easily use CTRL-C to exit the program. Not so with `nohup` and `&`.
 
 If you make changes, redeploy, and try to run your program again you will find that you will get an error that the port is already in use. Only one program may listen on a given port at a time.
 
@@ -90,16 +80,16 @@ Google has several links to resources that will help you [set up an ssh tunnel u
 On the Mac, you can use a command similar to the following:
 
 ```
-ssh -L 9000:mc01.cs.usfca.edu:8080 srollins@stargate.cs.usfca.edu
+ssh -L 9000:mcvm001.cs.usfca.edu:8080 srollins@stargate.cs.usfca.edu
 ```
 
 This command specifies that you want to forward traffic going to port 9000 on the local machine to mc01 port 8080 via the *gateway* stargate.
 
-You will need to replace `mc01.cs.usfca.edu:8080` with your assigned microcloud node and port. You will also replace `srollins` with your username.
+You will need to replace `mcvm001.cs.usfca.edu:8080` with your assigned microcloud node and port. You will also replace `srollins` with your username.
 
 Finally, the `9000` is the port you wish to use locally. This can be anything over 1024 as long as you are consistent with how it is used.
 
-Specifically, the command above assumes that I have logged into mc01.cs.usfca.edu and launched my server to listen on port 8080. 
+Specifically, the command above assumes that I have logged into mcvm001.cs.usfca.edu and launched my server to listen on port 8080. 
 
-In the browser on my local machine (i.e., my laptop connected to any network), I will open a browser and load `http://localhost:9000/all`. The browser will send the traffic to port 9000 on my local host, and the tunnel redirects that traffic to mc01 port 8080 via stargate!
+In the browser on my local machine (i.e., my laptop connected to any network), I will open a browser and load `http://localhost:9000/reviewsearch`. The browser will send the traffic to port 9000 on my local host, and the tunnel redirects that traffic to mcvm001 port 8080 via stargate!
 
