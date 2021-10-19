@@ -5,7 +5,8 @@ HTML, the Web, and the Internet
 The [Hypertext Markup Language (HTML)](http://www.w3schools.com/html/html_intro.asp) is the language used to create web pages. It allows a programmer to specify how text should be displayed in the browser using **tags**. Tags specify formatting instructions such as display some text in bold, some text in italics, and some text centered.
 
 ```html
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 	<head>	
 		<title>Sample Page</title>
 	</head>
@@ -131,7 +132,13 @@ The URL above has several parts:
 https://www.google.com/search?q=url+path&oq=url+path&aqs=chrome..69i57.3123j0j4&sourceid=chrome&es_sm=91&ie=UTF-8
 ```
 
-In this example, the protocol is `https`, the host is `www.google.com`, and the path is `/search`. Following the path are a set of **parameters**. These further identify the resource. The parameters begin with `?` and are a sequence of `key=value` pairs separated by `&`.
+In this example, the protocol is `https`, the host is `www.google.com`, and the path is `/search`. Following the path are a set of **query** parameters. These further identify the resource. The query parameters begin with `?` and are a sequence of `key=value` pairs separated by `&`.
+
+```
+https://github.com/CS601-F21/Project3#submission
+```
+
+Finally, a URL may have a **fragment** that references a particular place on the page as shown above.
 
 ### Loading a Web Page
 
@@ -219,7 +226,13 @@ In addition to 200 OK, other common status codes include the following:
 - 301 Moved
 - 403 Forbidden
 
-There are several differences between HTTP version 1.0 and version 1.1, which is now commonly used. In particular, HTTP 1.1 allows persistent connections. This means you can make several requests over the same connection between client and server. To make a connection non-persistent, you must specify the `Connection: close` header. Also, in HTTP 1.1 requests you must specify the `Host:` header.
+In the past few years, there have been significant changes to HTTP. As you can see from the following diagram from the [Akamai Developer Blog](https://developer.akamai.com/blog/2020/04/14/quick-introduction-http3), HTTP 1.1 was dominant for many years. Rollout of HTTP/2 starting in the mid-2010s, and HTTP/3 is currently gaining adoption.
+
+![https://developer.akamai.com/sites/default/files/inline-images/image1_18.png](https://developer.akamai.com/sites/default/files/inline-images/image1_18.png)
+
+> https://developer.akamai.com/sites/default/files/inline-images/image1_18.png
+
+Also see: [https://github.com/srollins/software-dev-materials/blob/master/notes/advanced/networking.md#http](https://github.com/srollins/software-dev-materials/blob/master/notes/advanced/networking.md#http)
 
 ### Port Number
 
@@ -228,7 +241,7 @@ When using telnet to open the connection it was necessary to use the number 80. 
 Web servers typically run on port 80. Unfortunately, without root permission on a computer you will not be able to run your web server on a port with a number lower than 1024. This means you will need to specify the port number in your URL. This is done by using `:port` after the host, for example something like the following:
 
 ```
-http://mc01.cs.usfca.edu:8080/search
+http://mcvm001.cs.usfca.edu:8080/search
 ```
 
 # The Internet
