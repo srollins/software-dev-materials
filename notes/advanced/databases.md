@@ -8,7 +8,7 @@ Databases and SQL
 
 Basic idea: save data so that it can survive even if the machine or application reboots
 
-- MusicLibrary gone in case of power failure
+- Inverted Index gone in case of power failure
 - Account information (usernames, passwords)? 
  
 Options:
@@ -58,7 +58,7 @@ Software - there are many Relational Database Management Systems (RDBMS) include
 
 `show databases;` - List all available databases.
 
-`use <dbname>;` - Use a particular database. For this course, this should be userXX.
+`use <dbname>;` - Use a particular database. For this course, this should be userNNN.
 
 `show tables;` - After selecting a database to use, show all tables in that database. 
 
