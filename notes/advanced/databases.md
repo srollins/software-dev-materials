@@ -56,23 +56,23 @@ Software - there are many Relational Database Management Systems (RDBMS) include
 
 ### General
 
-`show databases;` - List all available databases.
+`SHOW DATABASES;` - List all available databases.
 
-`use <dbname>;` - Use a particular database. For this course, this should be userNNN.
+`USE <dbname>;` - Use a particular database. For this course, this should be userNNN.
 
-`show tables;` - After selecting a database to use, show all tables in that database. 
+`SHOW TABLES;` - After selecting a database to use, show all tables in that database. 
 
 ### Creating a table
 ```
-mysql> create table contacts(
-    -> name VARCHAR(100) not null,
+mysql> CREATE TABLE contacts(
+    -> name VARCHAR(100) NOT NULL,
     -> extension INTEGER,
-    -> email VARCHAR(100) not null primary key,
+    -> email VARCHAR(100) NOT NULL PRIMARY KEY,
     -> startdate DATE
     -> );
     Query OK, 0 rows affected (0.08 sec)
 
-mysql> show tables; 
+mysql> SHOW TABLES; 
 
 +------------------+
 | Tables_in_user01 |
@@ -95,7 +95,7 @@ Data types include the following:
 ### Basic insertion/selection
 
 ```
-mysql> insert into contacts (name, extension, email, startdate) values ("Sami", 2024, "srollins", "2006-09-01");
+* mysql> INSERT INTO contacts (name, extension, email, startdate) values ("Sami", 2024, "srollins", "2006-09-01");
 Query OK, 1 row affected (0.00 sec)
 mysql> select * from contacts;
 +------+-----------+----------+------------+
@@ -106,9 +106,9 @@ mysql> select * from contacts;
 1 row in set (0.00 sec)
 ```
 ```
-select extension, email from contacts where name="Sami";
+SELECT extension, email FROM contacts WHERE name="Sami";
 
-select email from contacts where extension < 1500;
+SELECT email FROM contacts WHERE extension < 1500;
 ```
 
 ### Basic join
