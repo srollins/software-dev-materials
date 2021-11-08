@@ -97,7 +97,7 @@ Data types include the following:
 ```
 * mysql> INSERT INTO contacts (name, extension, email, startdate) values ("Sami", 2024, "srollins", "2006-09-01");
 Query OK, 1 row affected (0.00 sec)
-mysql> select * from contacts;
+mysql> SELECT * FROM contacts;
 +------+-----------+----------+------------+
 | name | extension | email    | startdate  |
 +------+-----------+----------+------------+
