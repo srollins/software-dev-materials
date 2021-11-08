@@ -145,6 +145,8 @@ SELECT * FROM user RIGHT OUTER JOIN phone ON user.id=phone.id;
 
 ALTER TABLE phone CHANGE COLUMN phone phonenum VARCHAR(50);
 
+ALTER TABLE phone ADD FOREIGN KEY (id) REFERENCES user(id);
+
 SELECT user.name, phone.phonenum FROM user JOIN phone WHERE user.id=phone.id;
 
 
