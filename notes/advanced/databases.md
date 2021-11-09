@@ -45,7 +45,7 @@ Common operations
 
 ## Details ##
 
-Software - there are many Relational Database Management Systems (RDBMS) include the following:
+Software - there are many Relational Database Management Systems (RDBMS) including the following:
 
 - Oracle
 - Postgres
