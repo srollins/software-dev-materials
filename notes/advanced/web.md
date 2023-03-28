@@ -226,14 +226,14 @@ In addition to 200 OK, other common status codes include the following:
 - 301 Moved
 - 403 Forbidden
 
-In the past few years, there have been significant changes to HTTP. As you can see from the following diagram from the [Akamai Developer Blog](https://developer.akamai.com/blog/2020/04/14/quick-introduction-http3), HTTP 1.1 was dominant for many years. Rollout of HTTP/2 starting in the mid-2010s, and HTTP/3 is currently gaining adoption.
+<!--In the past few years, there have been significant changes to HTTP. As you can see from the following diagram from the [Akamai Developer Blog](https://developer.akamai.com/blog/2020/04/14/quick-introduction-http3), HTTP 1.1 was dominant for many years. Rollout of HTTP/2 starting in the mid-2010s, and HTTP/3 is currently gaining adoption.
 
 ![https://developer.akamai.com/sites/default/files/inline-images/image1_18.png](https://developer.akamai.com/sites/default/files/inline-images/image1_18.png)
 
 > https://developer.akamai.com/sites/default/files/inline-images/image1_18.png
 
 Also see: [https://github.com/srollins/software-dev-materials/blob/master/notes/advanced/networking.md#http](https://github.com/srollins/software-dev-materials/blob/master/notes/advanced/networking.md#http)
-
+-->
 ### Port Number
 
 When using telnet to open the connection it was necessary to use the number 80. This is the **port** number. The IP address specifies the computer that will handle the request, and the port number specifies the application running on that computer. This allows the same server to run multiple applications that will serve clients. A computer, for example, might run both a web server and a mail server. The port number allows the network stack to determine which application should receive a given message that arrives from the Internet.
